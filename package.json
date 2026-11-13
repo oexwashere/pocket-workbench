@@ -1,0 +1,1 @@
+{"name":"pocket-workbench","version":"1.0.0","private":true,"type":"module","description":"A private, browser-based toolkit for everyday development tasks.","scripts":{"start":"node server.mjs","test":"node --test","check":"node --check src/app.js && node --check src/tools.js"},"engines":{"node":">=20"}}

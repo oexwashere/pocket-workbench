@@ -1,0 +1,416 @@
+:root {
+  --paper:#f5f3ec;
+  --ink:#253b35;
+  --muted:#78827a;
+  --line:#d9ddd3;
+  --accent:#e2eabf
+}
+* {
+  box-sizing:border-box
+}
+body {
+  margin:0;
+  background:var(--paper);
+  font:14px Arial,sans-serif;
+  color:var(--ink)
+}
+button,a,textarea {
+  -webkit-tap-highlight-color:transparent
+}
+button {
+  font:inherit;
+  color:inherit;
+  cursor:pointer
+}
+button:focus-visible,a:focus-visible,textarea:focus-visible {
+  outline:3px solid #849b60;
+  outline-offset:3px
+}
+button {
+  border:1px solid var(--line);
+  border-radius:6px;
+  padding:11px 18px;
+  background:transparent
+}
+button:hover {
+  background:#e9ecdf
+}
+button[hidden],[hidden] {
+  display:none!important
+}
+header,main,footer {
+  width:min(1160px,88%);
+  margin:auto
+}
+header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:30px 0;
+  border-bottom:1px solid var(--line)
+}
+a {
+  text-decoration:none;
+  color:inherit
+}
+.brand {
+  font-size:19px;
+  letter-spacing:-.8px;
+  font-weight:bold;
+  display:flex;
+  align-items:center;
+  gap:5px
+}
+.brand>span:last-child {
+  font-weight:400
+}
+.brand-icon {
+  background:var(--ink);
+  color:var(--paper);
+  padding:7px 9px;
+  border-radius:9px;
+  margin-right:8px;
+  font-size:23px
+}
+.privacy {
+  font-size:11px;
+  display:flex;
+  align-items:center;
+  gap:8px
+}
+.privacy i {
+  width:6px;
+  height:6px;
+  background:#78975a;
+  border-radius:50%
+}
+.intro {
+  padding:62px 0 45px;
+  position:relative
+}
+.eyebrow {
+  font-size:9px;
+  letter-spacing:2px;
+  font-weight:600
+}
+.intro h1 {
+  font-size:66px;
+  letter-spacing:-3px;
+  line-height:1.04;
+  font-weight:500;
+  margin:24px 0
+}
+.intro h1 em {
+  font-family:Georgia,serif;
+  font-weight:400;
+  color:#758763
+}
+.intro>p:last-of-type {
+  line-height:1.9;
+  color:#758078;
+  font-size:13px
+}
+.edition {
+  position:absolute;
+  bottom:55px;
+  right:0;
+  font-size:9px;
+  letter-spacing:2px;
+  color:var(--muted)
+}
+.workspace {
+  display:grid;
+  grid-template-columns:215px 1fr;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:#fbfaf6;
+  overflow:hidden;
+  box-shadow:0 10px 45px #243b3505
+}
+nav {
+  padding:22px 14px;
+  background:#eeeee5;
+  border-right:1px solid var(--line)
+}
+nav button {
+  width:100%;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  border:0;
+  text-align:left;
+  padding:15px 12px;
+  margin-bottom:8px;
+  font-size:12px
+}
+nav button>span {
+  font:18px monospace;
+  width:22px
+}
+nav button small {
+  margin-left:auto;
+  color:#8e9587;
+  font-size:8px
+}
+nav .active {
+  background:var(--accent);
+  box-shadow:0 1px 4px #243b3510
+}
+section.editor {
+  padding:32px
+}
+.editor-head {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px
+}
+.editor-head h2 {
+  font-size:28px;
+  font-weight:500;
+  letter-spacing:-1px;
+  margin:10px 0
+}
+.subtle {
+  border:0;
+  font-size:11px;
+  padding:8px
+}
+.editor>p:not(#status) {
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.6;
+  margin:9px 0 28px
+}
+.input-grid {
+  display:flex;
+  gap:16px
+}
+.input-grid label {
+  flex:1;
+  min-width:0;
+  font-size:10px;
+  color:#6d796d
+}
+textarea {
+  display:block;
+  resize:vertical;
+  width:100%;
+  min-height:170px;
+  background:#f7f7f0;
+  border:1px solid var(--line);
+  border-radius:7px;
+  padding:17px;
+  font:12px/1.7 monospace;
+  color:var(--ink);
+  margin:10px 0 18px
+}
+.actions {
+  display:flex;
+  align-items:center;
+  gap:8px
+}
+.primary {
+  background:var(--ink);
+  color:white;
+  border-color:var(--ink);
+  display:flex;
+  gap:25px
+}
+.primary:hover {
+  background:#3e584b
+}
+.shortcut {
+  font-size:9px;
+  color:#949b90;
+  margin-left:auto
+}
+#status {
+  font-size:11px;
+  min-height:15px;
+  margin:18px 0;
+  color:#5b7742;
+  overflow-wrap:anywhere
+}
+#status.error {
+  color:#a23d35
+}
+.output-head {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-size:9px;
+  letter-spacing:1px
+}
+.output-head button {
+  letter-spacing:0
+}
+pre {
+  margin:8px 0 0;
+  min-height:150px;
+  max-height:380px;
+  overflow:auto;
+  background:#eef1e7;
+  border:1px solid var(--line);
+  border-radius:7px;
+  padding:20px;
+  font:12px/1.8 monospace;
+  tab-size:2
+}
+.empty {
+  color:#929c8c;
+  font-style:italic
+}
+.diff-line {
+  display:block;
+  white-space:pre-wrap;
+  overflow-wrap:anywhere;
+  min-height:1.8em
+}
+.diff-line.added {
+  background:#dbe8cf;
+  color:#36512f
+}
+.diff-line.removed {
+  background:#f0dbd1;
+  color:#8c463a
+}
+.details {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+  margin:42px 0 60px
+}
+.details>div {
+  border-top:1px solid var(--line);
+  padding-top:21px
+}
+.details span {
+  font-size:9px;
+  letter-spacing:1.5px
+}
+.details p {
+  font-size:11px;
+  line-height:1.9;
+  color:var(--muted)
+}
+footer {
+  border-top:1px solid var(--line);
+  padding:24px 0;
+  display:flex;
+  justify-content:space-between;
+  color:var(--muted);
+  font-size:9px
+}
+footer>span:last-child {
+  letter-spacing:1.4px
+}
+footer b {
+  font-size:18px;
+  margin-left:15px;
+  color:#7b8a5f
+}
+@media(max-width:800px) {
+  .workspace {
+  grid-template-columns:1fr
+}
+nav {
+  display:flex;
+  border-right:0;
+  border-bottom:1px solid var(--line);
+  gap:6px;
+  padding:12px
+}
+nav button {
+  margin:0;
+  font-size:11px;
+  padding:11px 8px;
+  justify-content:center
+}
+nav button small {
+  display:none
+}
+.shortcut {
+  display:none
+}
+.edition {
+  display:none
+}
+.intro {
+  padding:40px 0 28px
+}
+.intro h1 {
+  font-size:55px
+}
+.privacy {
+  font-size:10px
+}
+.editor-head {
+  align-items:start
+}
+.editor-head .subtle {
+  font-size:10px;
+  padding-right:0
+}
+.details {
+  gap:16px
+}
+
+}
+@media(max-width:500px) {
+  header,main,footer {
+  width:90%
+}
+.brand {
+  font-size:15px
+}
+.brand-icon {
+  font-size:18px;
+  padding:6px
+}
+.privacy {
+  font-size:9px
+}
+section.editor {
+  padding:20px 16px
+}
+.input-grid {
+  flex-direction:column;
+  gap:0
+}
+.intro h1 {
+  font-size:53px
+}
+.actions {
+  flex-wrap:wrap
+}
+.actions button {
+  font-size:12px
+}
+.details {
+  grid-template-columns:1fr;
+  gap:15px;
+  margin:30px 0
+}
+.details>div {
+  padding-top:15px
+}
+.details p br {
+  display:none
+}
+footer {
+  gap:20px;
+  line-height:1.7
+}
+nav button {
+  gap:5px;
+  font-size:10px
+}
+.editor-head .eyebrow {
+  font-size:8px;
+  letter-spacing:1px
+}
+
+}
+
+nav button > span { white-space: nowrap; flex-shrink: 0; }
